@@ -7,6 +7,8 @@ using UnityEngine;
 /// </summary>
 public class GameManger : SingletonInstance<GameManger>
 {
+    private TowerScript _selectedTower;
+
     /// <summary>
     /// Provides tower button
     /// </summary>
@@ -44,6 +46,12 @@ public class GameManger : SingletonInstance<GameManger>
     public void BuyTower()
     {
         ClickedTowerButton = null;
+    }
+
+    public void SelectTower(TowerScript tower)
+    {
+        _selectedTower = tower;
+        _selectedTower.Select();
     }
 
     /// <summary>

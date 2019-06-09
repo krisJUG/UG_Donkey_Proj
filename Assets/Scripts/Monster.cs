@@ -39,7 +39,7 @@ public class Monster : MonoBehaviour
         if (SamePosition(_nextPos, _position))
         {
             _path.RemoveAt(0);
-            
+
             _nextPos = new Vector3(_nextPos.x + _path[0].x, _nextPos.y + _path[0].y, _nextPos.z + _path[0].z);
         }
 
